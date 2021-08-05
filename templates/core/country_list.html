@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Strativ Task</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col"><h3 style="text-align:center;">ID</h3></th>
+              <th scope="col"><h3 style="text-align:center;">Name</h3></th>
+              <th scope="col"><h3 style="text-align:center;">Alphacode2</h3></th>
+              <th scope="col"><h3 style="text-align:center;">Capital</h3></th>
+              <th scope="col"><h3 style="text-align:right;">Population</h3></th>
+              <th scope="col"><h3 style="text-align:center;">Timezone</h3></th>
+              <th scope="col"><h3 style="text-align:center;">Flag</h3></th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for i in countries %}
+            <tr>
+              <th scope="row"><p style="text-align:center;">{{i.id}}</p></th>
+              <td><p style="text-align:center;">{{i.name}}</p></td>
+              <td><p style="text-align:center;">{{i.alphacode2}}</p></td>
+              <td><p style="text-align:center;">{{i.capital}}</p></td>
+              <td><p style="text-align: right;">{{i.population}}</p></td>
+                <td><p style="text-align:center;">{{i.timezones}}</p></td>
+              <td class="flag"><img style="width:20px; margin-left:20px;" src="{{i.flag}}"></td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+
+</body>
+</html>

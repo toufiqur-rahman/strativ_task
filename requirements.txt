@@ -1,0 +1,4 @@
+Django==3.2.5
+djangorestframework==3.12.4
+markdown==3.3.4
+requests==2.26.0
